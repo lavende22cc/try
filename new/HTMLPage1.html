@@ -96,7 +96,16 @@
                 <li><div class="choiceButton3" onclick="change3(this)"><a>非旺季</a></div></li>
             </ul>
         </div>
-        <div><input type="button" onclick="src='https://github.com/HelloHe110/try/blob/main/new/HTMLPage2.html'" value="submit"></div>
+        <div>
+          <input type="button" onclick="redirectToNewPage()" value="Submit">
+        </div>
+
+        <script>
+          function redirectToNewPage() {
+            window.location.href = 'https://github.com/HelloHe110/try/blob/main/new/HTMLPage2.html';
+          }
+        </script>
+
     </div>
     <script language="javascript"> 
         function change(element) {
