@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .header{
+            width:100%;
+            height:10px;
+        }
+        .body{
+            width:100%;
+            height:600px;
+        }
+        #JR{
+            width:100%;
+            height:200px;
+            background:red;
+        }
+        #FH{
+            width:100%;
+            height:400px;
+        }
+        #Flight{
+            width:50%;
+            height:400px;
+            background:blue;
+            float:left;
+        }
+        ul{
+            list-style-type:none;
+            margin:0px;
+            padding:0px;
+            overflow:hidden;
+            width:100%;
+            height:50px;
+        }
+        li{
+            width:30%;
+            float:left;
+            margin:5px;
+        }
+        .choiceButton {
+            height: 50px;
+            border-style:hidden;
+            background:yellow;
+            color: black;
+        }
+        #Hotel{
+            width:50%;
+            height:400px;
+            background:green;
+            float:left;
+        }
+        #Total{
+            width:100%;
+            height:100px;
+            background:gray;
+        }
+        .TotalBlock{
+            width:100%;
+            height:50px;
+            border-style:hidden;
+            background:pink;
+        }
+        .footer{
+            width:100%;
+            height:10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header"></div>
+    <div class="body">
+        <div id="JR">
+            <div><h1>JR info</h1></div>
+        </div>
+        <div id="FH">
+            <div id="Flight">
+                <h1>Top5 Flight Tickets</h1>
+                <ul>
+                    <li><div class="choiceButton"><a>Sorting By Price</a></div></li>
+                    <li><div class="choiceButton"><a>Sorting By Time</a></div></li>
+                    <li><div class="choiceButton"><a>Sorting By All</a></div></li>
+                </ul>
+                <table></table>
+            </div>
+            <div id="Hotel">
+                <h1>Top5 Highest Rating Hotels</h1>
+                <table></table>
+            </div>
+        </div>
+        <div id="Total">
+            <h2 class="TotalBlock">Average Cost:</h2>
+            <h2 class="TotalBlock">Average Time:</h2>
+        </div>
+    </div>
+    <div class="footer"></div>
+</body>
+</html>
