@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #image{
+            width:47.5%;
+            height:500px;
+            float:left;
+        }
+        #inputData{
+            width:47.5%;
+            height:500px;
+            padding:20px;
+            float:left;
+        }
+        #destination{
+            width:200px;
+            height:50px;
+            margin:10px;
+            <!--background:gray;-->
+        }
+        #block{
+            width:90%;
+            height:100px;
+            margin:10px;
+        }
+        ul{
+            list-style-type:none;
+            margin:0px;
+            padding:0px;
+            overflow:hidden;
+        }
+        li{
+            float:left;
+            margin:5px;
+        }
+        p{
+            color:black;
+        }
+        .choiceButton{
+            width:150px;
+            height:20px;
+            border:1px solid black;
+            border-radius:5px;
+            color: black;
+            text-align:center;
+        }
+        .choiceButton2 {
+            width: 150px;
+            height: 20px;
+            border: 1px solid black;
+            border-radius: 5px;
+            color: black;
+            text-align: center;
+        }
+        .choiceButton3 {
+            width: 150px;
+            height: 20px;
+            border: 1px solid black;
+            border-radius: 5px;
+            color: black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="image"><img src="Japan_Map.png" alt="Japan_Map" style="width:100%;height:100%"></div>
+    <div id="inputData">
+        <div id="destination">
+            <p>請問目的地是哪裡</p>
+            <div><input type="text"></div>
+        </div>
+        <div id="block">
+            <p>機票預計價錢</p>
+            <ul>
+                <li><div class="choiceButton" onclick="change(this)"><a>0~10000</a></div></li>
+                <li><div class="choiceButton" onclick="change(this)"><a>10001~30000</a></div></li>
+                <li><div class="choiceButton" onclick="change(this)"><a>30001~</a></div></li>
+            </ul>
+        </div>
+        <div id="block">
+            <p>飯店預計價錢</p>
+            <ul>
+                <li><div class="choiceButton2" onclick="change2(this)"><a>0~1000</a></div></li>
+                <li><div class="choiceButton2" onclick="change2(this)"><a>1001~3000</a></div></li>
+                <li><div class="choiceButton2" onclick="change2(this)"><a>3001~</a></div></li>
+            </ul>
+        </div>
+        <div id="block">
+            <p>出發時間</p>
+            <ul>
+                <li><div class="choiceButton3" onclick="change3(this)"><a>旺季</a></div></li>
+                <li><div class="choiceButton3" onclick="change3(this)"><a>非旺季</a></div></li>
+            </ul>
+        </div>
+        <div><input type="button" onclick="window: location.href='HTMLPage2.html'" value="submit"></div>
+    </div>
+    <script language="javascript"> 
+        function change(element) {
+            var buttons = document.querySelectorAll('.choiceButton');
+            buttons.forEach(function (button) {
+                button.style.background = 'white';
+            });
+            element.style.background = 'pink';
+        }
+        function change2(element) {
+            var buttons = document.querySelectorAll('.choiceButton2');
+            buttons.forEach(function (button) {
+                button.style.background = 'white';
+            });
+            element.style.background = 'pink';
+        }
+        function change3(element) {
+            var buttons = document.querySelectorAll('.choiceButton3');
+            buttons.forEach(function (button) {
+                button.style.background = 'white';
+            });
+            element.style.background = 'pink';
+        }
+    </script>
+</body>
+</html>
