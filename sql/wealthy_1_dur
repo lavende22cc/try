@@ -16,11 +16,11 @@ with wealthy_date as (
 	and ticket_price <= 10000
 ), wealthy_1_dur as (
 	select full_name, full_name_mandarin, w.iata, airline,
-	departure_time, landing_time, avg(fly_duration) as avg_duration, avg(ticket_price) as avg_ticket_$
+	departure_time, landing_time, fly_duration, avg(ticket_price) as avg_ticket_$
 	from wealthy_t1_dur w
 	join airport a on w.iata = a.iata
-	group by full_name, full_name_mandarin, w.iata, airline, departure_time, landing_time, ticket_price
-	order by avg(fly_duration) asc
+	group by full_name, full_name_mandarin, w.iata, airline, departure_time, landing_time, fly_duration
+	order by fly_duration asc
 	limit 5
 )
 select * from wealthy_1_dur;
