@@ -6,7 +6,7 @@ with wealthy_date as (
 	limit 30
 )
 
-select w.iata, w.date, ticket_price, departure_time, landing_time, duration
+select w.iata, w.date, ticket_price, departure_time, landing_time, duration, airline
 from wealthy_date w
 join airport_to_flight f
 on w.date = f.date
