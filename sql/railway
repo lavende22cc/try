@@ -2,5 +2,4 @@ select a.full_name, a.full_name_mandarin, iata, jr_station_name, ticket_price_jp
 duration as avg_jr_time
 from airport_to_jr aj join airport a
 on aj.airport_iata = a.iata
-where airport_iata = 'IATA_vari' and jr_station_name = 'JR_vari'
-/*where airport_iata = 'KIX' and jr_station_name = 'Kyoto'*/
+where jr_station_name = 'Tokyo'
