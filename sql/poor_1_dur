@@ -13,7 +13,7 @@ with poor_date as (
 	from poor_t_ p
 	join airport_to_jr aj on p.iata = aj.airport_iata
 	where aj.jr_station_name = 'Tokyo'
-	and ticket_price < 100000
+	and ticket_price <= 10000
 	order by fly_duration
 ), poor_1_dur as (
 	select full_name, full_name_mandarin, p.iata, airline,
