@@ -1,0 +1,3 @@
+select airport_iata from airport_to_jr
+where jr_station_name = 'JR_vari'
+/*will return a list, might have two airport available*/
