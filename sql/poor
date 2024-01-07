@@ -6,7 +6,7 @@ with poor_date as (
 	limit 30
 )
 
-select p.iata, p.date, ticket_price, departure_time, landing_time, duration
+select p.iata, p.date, ticket_price, departure_time, landing_time, duration, airline
 from poor_date p
 join airport_to_flight f
 on p.date = f.date
