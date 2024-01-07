@@ -2,3 +2,7 @@ select airport_iata as iata, ticket_price_jpy as jr_$,
 duration as avg_jr_time
 from airport_to_jr
 where airport_iata = 'IATA_vari' and jr_station_name = 'JR_vari'
+
+select airport_iata as iata, ticket_price_jyp as ticket_price, duration_minute as flight_time
+from airport_to_jr
+where "destination"=jr_station_name
