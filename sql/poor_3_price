@@ -20,7 +20,7 @@ with poor_date as (
 	from poor_t3_pri p
 	join airport a on p.iata = a.iata
 	group by full_name, full_name_mandarin, p.iata, airline, departure_time, landing_time
-	order by avg(ticket_price)
+	order by avg(ticket_price) desc
 	limit 5
 )
 select * from poor_3_pri;
