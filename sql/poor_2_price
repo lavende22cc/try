@@ -13,7 +13,7 @@ with poor_date as (
 	from poor_t_ p
 	join airport_to_jr aj on p.iata = aj.airport_iata
 	where aj.jr_station_name = 'Tokyo'
-	and ticket_price between 10000 and 30000
+	and ticket_price between 7500 and 30000
 ), poor_2_pri as (
 	select full_name, full_name_mandarin, p.iata, airline,
 	departure_time, landing_time, avg(fly_duration) as avg_duration, avg(ticket_price) as avg_ticket_$
